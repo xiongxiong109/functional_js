@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试bind</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		#box{
+			width: 100px;
+			height: 100px;
+			background-color: #ccc;
+		}
+	</style>
+	<script type="text/javascript" src="underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<div id="box">box</div>
+	<script type="text/javascript">
+		//bind事件
+		function showAttr(){
+			console.log( _.keys(this) );
+		}
+		_.bind(showAttr, $("#box"))();//将某一个函数的this指向被绑定的对象中
+
+		//bindAll事件,this指向绑定对象
+		var buttonView={
+			label:'underscore',
+			onHover:function(){
+				console.log(this.label);
+			}
+		}
+		_.bindAll(buttonView,'onHover');
+		$("#box").bind('mouseover',buttonView.onHover);
+	</script>
+</body>
+</html>

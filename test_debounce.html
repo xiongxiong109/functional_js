@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试debounce</title>
+	<script type="text/javascript" src="underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	隔300ms触发changeColor,并且只在函数的最后一次才真正执行
+	(防止函数的多次执行和反跳)
+	*/
+		var lazy=_.debounce(changeColor,300);
+		function changeColor(){
+			console.log( _.random(10,50) );
+		}
+		$(window).on('resize',lazy);
+	</script>
+</body>
+</html>

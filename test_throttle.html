@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试throttle</title>
+	<script type="text/javascript" src="underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		// _.delay() : 延迟执行函数
+		// throttle:重复调用某函数的时候,最多每隔wait调用一次该函数,对于某些调用频率高的函数，可以起到一定的缓冲作用
+		function changeColor(){
+			console.log( _.random(50,100) );
+		}
+
+		var throttle=_.throttle(changeColor,200);
+		$(window).on('resize',throttle);
+		// $(window).on('resize',changeColor);
+	</script>
+</body>
+</html>

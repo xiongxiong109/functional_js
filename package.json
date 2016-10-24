@@ -1,0 +1,26 @@
+{
+  "name": "functional_js",
+  "version": "1.0.0",
+  "description": "functional js",
+  "main": "index.js",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "cd test && mocha ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiongxiong109/functional_js.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "xiongxiong109",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiongxiong109/functional_js/issues"
+  },
+  "homepage": "https://github.com/xiongxiong109/functional_js#readme"
+}

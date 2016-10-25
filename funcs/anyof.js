@@ -13,7 +13,7 @@ function _anyOfTrue(truth , fn) {
 	reduceRight和reduce的第三个参数可以设置一个起始值
 */
 function anyOf() {
-	return _.reduceRight(_.identity(_.toArray(arguments)), _anyOfRight, false);
+	return _.reduceRight(_.identity(_.toArray(arguments)), _anyOfTrue, false);
 }
 
 module.exports = anyOf;

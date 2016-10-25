@@ -12,6 +12,10 @@ function F () {
 
 describe('test for allof func', () => {
 
+	it('should be true when has no argument', () => {
+		expect(allOf()).to.be.true;
+	});
+
 	it('should be false when all of false', () => {
 		expect(allOf(F,F,F)).to.be.false;
 	});

@@ -18,7 +18,7 @@ function allOf () {
 
 	return _.reduce(args, function(result, func) {
 		return result && func();
-	});
+	}, true);
 
 }
 

@@ -48,4 +48,7 @@ function interpose(inter, arr) {
 
 // console.log(interpose('&', [1,2,3]))
 
-module.export = interpose;
+module.exports = {
+	mapcat: mapcat,
+	interpose: interpose
+}

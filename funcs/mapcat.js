@@ -50,5 +50,6 @@ function interpose(inter, arr) {
 
 module.exports = {
 	mapcat: mapcat,
-	interpose: interpose
+	interpose: interpose,
+	construct: construct
 }

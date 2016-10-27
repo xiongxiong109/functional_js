@@ -32,13 +32,15 @@ function rename(obj, newNames) {
 			// return memo
 		}
 		return memo
+		// apply是把一个数组的元素依次应用到了需要apply的函数参数上
 	}, _.omit.apply(null, construct(obj, _.keys(newNames))));
 }
 
-var newObj = rename(oldObj, {
-	'a': 'xiong',
-	'b': 'jian',
-	'c': 'qiao'
-})
+// var newObj = rename(oldObj, {
+// 	'a': 'xiong',
+// 	'b': 'jian',
+// 	'c': 'qiao'
+// })
 
-console.log(newObj)
+// console.log(newObj)
+module.exports = rename

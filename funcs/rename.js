@@ -4,14 +4,14 @@
 var _ = require('underscore');
 var construct = require('./mapcat').construct;
 
-var oldObj = {
-	a: '123',
-	b: 'xxx',
-	c: 'asdf',
-	d: 'sdf21'
-};
+// var oldObj = {
+// 	a: '123',
+// 	b: 'xxx',
+// 	c: 'asdf',
+// 	d: 'sdf21'
+// };
 
-// low 逼版rename
+// low逼版rename
 function lowRename(obj, newNames) {
 	for (var key in newNames) {
 		if (obj[key]) {

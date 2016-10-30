@@ -27,19 +27,34 @@ function finder(currentFun, bestFun, vColl) {
 
 // console.log(finder(_.identity, Math.max, [1,2,3,4,5]))
 
-// let person = [
-// 	{
-// 		uname: 'xiong',
-// 		uage: 21
-// 	},
-// 	{
-// 		uname: 'jian',
-// 		uage: 18
-// 	}
-// ]
+let person = [
+	{
+		uname: 'xiong',
+		uage: 21
+	},
+	{
+		uname: 'jian',
+		uage: 18
+	}
+]
 
 // let getAge = plucker('uage');
 
 // console.log(finder(getAge, Math.max, person));
+/*
+	reduce的方法是比较抽象的
+	我们应该把它的归一化参数理解为一个reduce后的
+	理想结果, 这个结果是未知的, 也是很难看到的
+*/
+// let p = _.reduce(person, (finalColl, cColl) => {
+
+// 	let curAge = cColl.uage;
+// 	let maxAge =finalColl.uage;
+
+// 	return Math.min(curAge, maxAge)
+
+// });
+
+// console.log(p);
 
 module.exports = finder;
